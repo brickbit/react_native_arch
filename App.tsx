@@ -6,7 +6,15 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
+import Navigator from './src/app/navigator/Navigator';
+
+export default function App() {
+  return (
+    <Navigator/>
+  );
+}
+
+/*import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -116,3 +124,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+*/
