@@ -7,12 +7,19 @@
 
 import React from 'react';
 import Navigator from './src/app/navigator/Navigator';
+import { ApolloProvider } from '@apollo/client';
+import client from './src/data/client/ApolloClient';
+import { AppRegistry } from 'react-native';
 
 export default function App() {
   return (
-    <Navigator/>
+    <ApolloProvider client={client}>
+      <Navigator/>
+    </ApolloProvider>
   );
 }
+
+AppRegistry.registerComponent('FCMApp', () => App);
 
 /*import type {PropsWithChildren} from 'react';
 import {

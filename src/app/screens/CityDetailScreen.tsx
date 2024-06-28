@@ -5,13 +5,13 @@ import { Text, TouchableOpacity } from "react-native";
 
 type Props = NativeStackScreenProps<Routes, 'CityDetail', 'FCMStack'>;
 
-export default class CityDetailScreen extends Component<Props,{}> {
-    constructor(props: Props) {
-        super(props);
-    }
-    render() {
-        return <>
-            <Text>Estamos en el detalle</Text>
+export const CityDetailScreen: React.FC<Props> = ({ route }) => {
+    const { id } = route.params;
+
+    return (
+        <>
+            <Text>Estamos en el detalle {id}</Text>
         </>
-    }
+    );
+    
 }

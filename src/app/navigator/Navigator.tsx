@@ -2,9 +2,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Routes } from "./routes";
 import { NavigationContainer } from "@react-navigation/native";
 import { Text } from "react-native";
-import HomeScreen from "../screens/HomeScreen";
-import CityDetailScreen from "../screens/CityDetailScreen";
 import { enableScreens } from "react-native-screens";
+import { HomeScreen } from "../screens/home/HomeScreen";
+import { CityDetailScreen } from "../screens/CityDetailScreen";
 
 const Stack = createNativeStackNavigator<Routes>();
 enableScreens();
