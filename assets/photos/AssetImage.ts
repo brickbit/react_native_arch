@@ -2,35 +2,38 @@ import { Image } from "react-native"
 
 export const getAssetImage = (name: string) => {
     switch(name) {
-        case 'amsterdam': {
+        case 'Amsterdam': {
             return require('./amsterdam.jpg');
         }
-        case 'athens': {
+        case 'Athens': {
             return require('./athens.jpg');
         }
-        case 'barcelona': {
+        case 'Barcelona': {
             return require('./barcelona.jpg');
         }
-        case 'berlin': {
+        case 'Berlin': {
             return require('./berlin.jpg');
         }
-        case 'dublin': {
+        case 'Dublin': {
             return require('./dublin.jpg');
         }
-        case 'lisbon': {
+        case 'Lisbon': {
             return require('./lisbon.jpg');
         }
-        case 'london': {
+        case 'London': {
             return require('./london.jpg');
         }
-        case 'paris': {
+        case 'Paris': {
             return require('./paris.jpg');
         }
-        case 'rome': {
+        case 'Rome': {
             return require('./rome.jpg');
         }
-        case 'tokyo': {
+        case 'Tokyo': {
             return require('./tokyo.jpeg');
+        }
+        case 'FCMLogo': {
+            return require('./fcm_logo.png');
         }
         default: return require('./tokyo.jpeg');
     }

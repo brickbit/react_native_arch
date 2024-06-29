@@ -12,11 +12,16 @@ export const GET_CITIES = gql`
     }
 `;
 
-export const CONTINENT_QUERY = gql`
-  query ContinentQuery {
-    continents {
-      code
+export const GET_CITY = gql`
+  query GetCity {
+    city(id: 2) {
+      id
       name
+      nativeName
+      currency
+      language
     }
   }
 `;
+
+
