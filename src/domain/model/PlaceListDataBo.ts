@@ -1,5 +1,5 @@
 import { PlaceBo } from "./PlaceBo";
 
-export default interface PlaceDataBo {
+export default interface PlaceListDataBo {
     places: PlaceBo[]
 }

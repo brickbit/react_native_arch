@@ -14,8 +14,8 @@ query PlacesQuery {
 `;
 
 export const GET_PLACES_FILTERED = gql`
-query PlacesQuery {
-    places {
+query PlacesQueryByKey($key: String!) {
+    place(key: $key) {
         key
         place {
             type
@@ -25,3 +25,5 @@ query PlacesQuery {
     }
 }
 `;
+
+

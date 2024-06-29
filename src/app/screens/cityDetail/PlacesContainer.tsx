@@ -7,7 +7,7 @@ export const usePlacesContainer = (name: string | undefined) => {
     const [places, setPlaces] = useState<PlaceDataBo | null>(null);
     const [isLoadingPlaces, setIsLoading] = useState(false);
     if (name != undefined) {
-        const { loading, error, data }: GetPlacesResult = getFilteredPlacesUseCase(name);
+        const { loading, error, data }: GetPlacesResult = getFilteredPlacesUseCase(name.toLowerCase());
         useEffect(() => {
             if(isLoadingPlaces){
                 setIsLoading(loading ?? false)

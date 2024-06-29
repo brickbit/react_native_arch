@@ -5,8 +5,6 @@ import { ActivityIndicator, FlatList, Image, ScrollView, StyleSheet, Text, Touch
 import { useDetailCityContainer } from "./CityDetailContainer";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 import { usePlacesContainer } from "./PlacesContainer";
-import PlaceDataBo from "../../../domain/model/PlaceDataBo";
-import { PlaceBo } from "../../../domain/model/PlaceBo";
 
 type Props = NativeStackScreenProps<Routes, 'CityDetail', 'FCMStack'>;
 
@@ -41,8 +39,8 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
             <Text>{item.place.name}</Text>
         );
     }
-    console.log("Places: " + places?.places[0].place.name)
-    const placesOfCity = places?.places
+    console.log("Places: " + places?.place[0].place.name)
+    const placesOfCity = places?.place
     return (
         <FlatList style={styles.list}
             ListHeaderComponent={ _getHeader() }
