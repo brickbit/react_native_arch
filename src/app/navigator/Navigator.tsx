@@ -18,24 +18,24 @@ export default function Navigator() {
                     name="Home"
                     component={HomeScreen}
                     options={{
-                        headerTitle: (props) => <View style={styles.headerStyle}>
+                        headerTitle: (props) => 
                             <Image 
                                 source={getAssetImage('FCMLogo')}
                                 style={styles.imageHeader}
-                            />
-                        </View>,
+                            />,
+                        headerTitleAlign: 'center',                            
                     }}
                 />
                 <Stack.Screen
                     name="CityDetail"
                     component={CityDetailScreen}
                     options={{
-                        headerTitle: (props) => <View style={styles.headerStyle}>
+                        headerTitle: (props) =>
                             <Image 
                                 source={getAssetImage('FCMLogo')}
                                 style={styles.imageHeader}
-                            />
-                        </View>,
+                            />,
+                        headerTitleAlign: 'center'
                     }}
                 />
             </Stack.Navigator>
@@ -44,14 +44,9 @@ export default function Navigator() {
 }
 
 const styles = StyleSheet.create({
-    headerStyle: {
-        flex:1,
-        fjustifyContent: 'center',
-        alignItems: 'center',
-    },
     imageHeader: {
-        justifyContent: 'center',
+        position: 'relative',
         width: 80,
-        height: 55
+        height: 55,
     }
 })

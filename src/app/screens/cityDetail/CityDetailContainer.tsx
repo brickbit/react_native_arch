@@ -3,8 +3,7 @@ import { GetCityDetailResult } from "../../../data/repository/CityRepository";
 import { CityBo } from "../../../domain/model/CityBo";
 import { getCityDetailUseCase } from "../../../domain/useCase/GetCityDetailUseCase";
 
-
-export const useDetailCityContainer = (id: string) => {
+export const useDetailCityContainer = (id: number) => {
     const { loading, error, data }: GetCityDetailResult = getCityDetailUseCase(id);
 
     const [city, setCity] = useState<CityBo | null>(null);
@@ -15,9 +14,8 @@ export const useDetailCityContainer = (id: string) => {
             setIsLoading(isLoading)
         }
         if (data) {
-            setCity(data);
+            setCity(data.city);
         }
       }, [data]);
-      console.log("Detail: "+data?.name)
     return {city, isLoading};
-  };
+};

@@ -11,15 +11,14 @@ type Props = NativeStackScreenProps<Routes, 'Home', 'FCMStack'>;
 export const HomeScreen: React.FC<Props> =({ navigation }) => {
     const { cities, isLoading } = useCityContainer();
 
-    if (isLoading) return <ActivityIndicator/>
-    //if (error) return <Text>Error: {error.message}</Text>
+    if (isLoading) return <ActivityIndicator size={'large'} style={styles.spinner}/>
 
     const _keyExtractor = (item: any, index: { toString: () => any;}) => index.toString()
 
     const _getHeader = () =>  {
         return (
             <>
-                <TouchableOpacity style={styles.infoBox} onPress={()=>{navigation.navigate('CityDetail', { id: '0'})}}>
+                <TouchableOpacity style={styles.infoBox} onPress={()=>{navigation.navigate('CityDetail', { id: 0, name:'Tokyo'})}}>
                     <Text style={styles.subtitle}>We still do not have the traveler's data click here to obtain their data through an identity document</Text>
                 </TouchableOpacity>
                 <Text style={styles.title}>Cities to visit</Text>
@@ -33,10 +32,9 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
         const language = (item as CityBo).language
         const currency = (item as CityBo).currency
         let assetName = getAssetImage(name)
-        console.log(name + ":" + assetName)
         return (
             <TouchableOpacity 
-                onPress={() =>{navigation.navigate('CityDetail', { id: item.id})}}
+                onPress={() =>{navigation.navigate('CityDetail', { id: item.id, name: item.name})}}
             >
                 <Image
                     source={getAssetImage(name)}
@@ -74,7 +72,9 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         justifyContent: 'center',
     },
-    
+    spinner: {
+        flex: 1
+    },
     detailCityBox: {
         width: '90%',
         backgroundColor: 'rgba(0,0,0,0.8)',

@@ -1,5 +1,5 @@
 
 export type Routes = {
     Home: undefined;
-    CityDetail: { id: string };
+    CityDetail: { id: number, name: string };
 };

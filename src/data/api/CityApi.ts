@@ -13,8 +13,8 @@ export const GET_CITIES = gql`
 `;
 
 export const GET_CITY = gql`
-  query GetCity {
-    city(id: 2) {
+  query GetCity($id: Int!) {
+    city(id: $id) {
       id
       name
       nativeName

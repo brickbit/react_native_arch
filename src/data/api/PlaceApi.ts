@@ -10,7 +10,18 @@ query PlacesQuery {
             coordinates
         }
     }
-  }
 }
 `;
 
+export const GET_PLACES_FILTERED = gql`
+query PlacesQuery {
+    places {
+        key
+        place {
+            type
+            name 
+            coordinates
+        }
+    }
+}
+`;
