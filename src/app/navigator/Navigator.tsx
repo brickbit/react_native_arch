@@ -6,6 +6,7 @@ import { enableScreens } from "react-native-screens";
 import { HomeScreen } from "../screens/home/HomeScreen";
 import { getAssetImage } from "../../../assets/photos/AssetImage";
 import { CityDetailScreen } from "../screens/cityDetail/CityDetailScreen";
+import { NfcScannerScreen } from "../screens/nfcScanner/NfcScannerScreen";
 
 const Stack = createNativeStackNavigator<Routes>();
 enableScreens();
@@ -29,6 +30,18 @@ export default function Navigator() {
                 <Stack.Screen
                     name="CityDetail"
                     component={CityDetailScreen}
+                    options={{
+                        headerTitle: (props) =>
+                            <Image 
+                                source={getAssetImage('FCMLogo')}
+                                style={styles.imageHeader}
+                            />,
+                        headerTitleAlign: 'center'
+                    }}
+                />
+                <Stack.Screen
+                    name="NfcScanner"
+                    component={NfcScannerScreen}
                     options={{
                         headerTitle: (props) =>
                             <Image 
