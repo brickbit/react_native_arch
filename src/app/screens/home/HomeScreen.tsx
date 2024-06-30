@@ -1,27 +1,35 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Routes } from "../../navigator/routes";
-import { ActivityIndicator, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, FlatList, Image, NativeModules, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { CityBo } from "../../../domain/model/CityBo";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 import { useCityContainer } from "./CityContainer";
+import { useState } from "react";
 
+const {DocumentIdentifierManager} = NativeModules
 
 type Props = NativeStackScreenProps<Routes, 'Home', 'FCMStack'>;
 
 export const HomeScreen: React.FC<Props> =({ navigation }) => {
     const { cities, isLoading } = useCityContainer();
+    const [ deviceId, setDeviceId ] = useState("")
+    const getDeviceId = () => DocumentIdentifierManager.getDeviceId(
+        (res: string) => {setDeviceId(res);},
+        (err: string) => {console.log(err);}
+    );
 
     if (isLoading) return <ActivityIndicator size={'large'} style={styles.spinner}/>
 
     const _keyExtractor = (item: any, index: { toString: () => any;}) => index.toString()
 
     const _getHeader = () =>  {
+        getDeviceId()
         return (
             <>
                 <TouchableOpacity style={styles.infoBox} onPress={()=>{navigation.navigate('CityDetail', { id: 0, name:'Tokyo'})}}>
                     <Text style={styles.subtitle}>We still do not have the traveler's data click here to obtain their data through an identity document</Text>
                 </TouchableOpacity>
-                <Text style={styles.title}>Cities to visit</Text>
+                <Text style={styles.title}>Cities to visit {deviceId}</Text>
             </>     
         );
     }
