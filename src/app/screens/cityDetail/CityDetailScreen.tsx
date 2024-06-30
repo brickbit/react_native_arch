@@ -36,7 +36,11 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
 
     const _renderItem = ({item}: any) => {
         return (
-            <Text>{item.place.name}</Text>
+            <View style={styles.listItem}>
+                <Text style={styles.cardTitle}>{item.place.name}</Text>
+                <Text style={styles.cardSubtitle}>{item.place.type}</Text>
+                <Text>{(item.place.coordinates as number[])[0] + " - " + (item.place.coordinates as number[])[1]}</Text>
+            </View>
         );
     }
     console.log("Places: " + places?.place[0].place.name)
@@ -72,6 +76,22 @@ const styles = StyleSheet.create({
         bottom: 0
     },
     list: {
-
-    }
+    },
+    listItem: {
+        padding: 16,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: 'black',
+        marginTop: 16,
+        marginHorizontal: 16
+    },
+    cardTitle: {
+        fontSize: 20,
+        color: 'black',
+        fontWeight: 'bold'
+    },
+    cardSubtitle: {
+        fontSize: 14,
+        color: 'black',
+    },
 });
