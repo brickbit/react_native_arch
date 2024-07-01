@@ -20,7 +20,7 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
         return (
             <>
                 <TouchableOpacity style={styles.infoBox} onPress={()=>{navigation.navigate('NfcScanner')}}>
-                    <Text style={styles.subtitle}>We still do not have the traveler's data click here to obtain their data through an identity document</Text>
+                    <Text style={styles.cardTitle}>Click here to scan your document ID</Text>
                 </TouchableOpacity>
                 <Text style={styles.title}>Cities to visit</Text>
             </>     
@@ -93,10 +93,9 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     infoBox: {
-        borderWidth: 1,
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         paddingHorizontal: 24,
-        paddingVertical: 32,
+        paddingVertical: 8,
         marginBottom: 24,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20, 
@@ -134,6 +133,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: 'white',
         fontWeight: 'bold',
+        textAlign: 'center'
     },
     cardSubtitle: {
         fontSize: 14,
