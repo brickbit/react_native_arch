@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { GetPlacesResult } from "../../../data/repository/PlaceRepository";
+import { GetPlacesByKeyResult, GetPlacesResult } from "../../../data/repository/PlaceRepository";
 import { getFilteredPlacesUseCase } from "../../../domain/useCase/GetFilteredPlacesUseCase";
-import PlaceDataBo from "../../../domain/model/PlaceDataBo";
+import PlaceListDataBo from "../../../domain/model/PlaceListDataBo";
+import PlaceKeyDataBo from "../../../domain/model/PlaceKeyDataBo";
 
 export const usePlacesContainer = (name: string | undefined) => {
-    const [places, setPlaces] = useState<PlaceDataBo | null>(null);
+    const [places, setPlaces] = useState<PlaceKeyDataBo | null>(null);
     const [isLoadingPlaces, setIsLoading] = useState(false);
     if (name != undefined) {
-        const { loading, error, data }: GetPlacesResult = getFilteredPlacesUseCase(name.toLowerCase());
+        const { loading, error, data }: GetPlacesByKeyResult = getFilteredPlacesUseCase(name.toLowerCase());
         useEffect(() => {
             if(isLoadingPlaces){
                 setIsLoading(loading ?? false)
