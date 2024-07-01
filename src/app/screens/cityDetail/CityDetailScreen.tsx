@@ -39,11 +39,10 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
             <View style={styles.listItem}>
                 <Text style={styles.cardTitle}>{item.place.name}</Text>
                 <Text style={styles.cardSubtitle}>{item.place.type}</Text>
-                <Text>{(item.place.coordinates as number[])[0] + " - " + (item.place.coordinates as number[])[1]}</Text>
+                <Text style={styles.cardSubtitle}>{(item.place.coordinates as number[])[0] + " - " + (item.place.coordinates as number[])[1]}</Text>
             </View>
         );
     }
-    console.log("Places: " + places?.place[0].place.name)
     const placesOfCity = places?.place
     return (
         <FlatList style={styles.list}
@@ -58,7 +57,8 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
 
 const styles = StyleSheet.create({
     spinner: {
-        flex: 1
+        flex: 1,
+        color: 'rgba(0,222,0,255)'
     },
     image: {
         width: '100%',

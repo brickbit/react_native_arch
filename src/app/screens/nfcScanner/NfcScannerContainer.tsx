@@ -1,28 +1,45 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NativeModules } from "react-native";
 
 const {DocumentIdentifierManager} = NativeModules
 
 export const useNfcScannerContainer = () => {
-    const [ deviceId, setDeviceId ] = useState("")
+    const [ documentData, setDocumentData ] = useState<DocumentDataBo | null>(null);
+    const [ error, setError ] = useState<string | null>(null)
+    const [ isLoading, setIsLoading ] = useState(false)
+    const [ canNumber, setCanNumber ] = useState<string | undefined>('')
 
-    const getDeviceId = () => DocumentIdentifierManager.getDeviceId(
-        (res: string) => {setDeviceId(res);},
-        (err: string) => {console.log(err);}
-    );
-    const data = getDeviceId()
+    const scanDocument = () => {
+        setIsLoading(true);
+        DocumentIdentifierManager.scanDocument(
+            canNumber,
+            (res: string) => {
+                const doc: DocumentDataBo = JSON.parse(res);
+                setDocumentData(doc);
+                setIsLoading(false);
+            },
+            (err: string) => {
+                setError(err);
+                setIsLoading(false);
+            }
+        );
+    }
 
-    /*const { loading, error, data }: GetCitiesResult = getCitiesUseCase();
-    const [cities, setCities] = useState<CityListDataBo | null>(null);
-    const [isLoading, setIsLoading] = useState(loading);*/
-  
-    useEffect(() => {
-        /*if(isLoading){
-            setIsLoading(loading)
-        }*/
-        if (data) {
-            setDeviceId(data);
+    const retry = (canNumber: string) => {
+        setCanNumber(canNumber)
+        setError(null)
+        setDocumentData(null)
+        setIsLoading(false)
+    }
+
+    const onChangeNumber = (input: string|undefined) => {
+        if(input != undefined) {
+            setCanNumber(input)
+        } else {
+            setCanNumber("")
         }
-      }, [data]);
-    return {deviceId};
-  };
+        
+    }
+
+    return {documentData, error, isLoading, canNumber, scanDocument, retry, onChangeNumber};
+};

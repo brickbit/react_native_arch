@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     spinner: {
-        flex: 1
+        flex: 1,
+        color: 'rgba(0,222,0,255)'
     },
     detailCityBox: {
         width: '90%',
@@ -92,6 +93,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     infoBox: {
+        borderWidth: 1,
         backgroundColor: 'white',
         paddingHorizontal: 24,
         paddingVertical: 32,
@@ -104,12 +106,14 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         marginBottom: 16,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: 'black'
     },
     subtitle: {
         fontSize: 16,
         fontWeight: '500',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'black'
     },
     list: {
         width: '100%'
@@ -129,7 +133,7 @@ const styles = StyleSheet.create({
     cardTitle: {
         fontSize: 20,
         color: 'white',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     cardSubtitle: {
         fontSize: 14,
