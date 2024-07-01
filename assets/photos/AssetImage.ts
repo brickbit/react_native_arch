@@ -35,6 +35,9 @@ export const getAssetImage = (name: string) => {
         case 'FCMLogo': {
             return require('./fcm_logo.png');
         }
+        case 'scanNfc': {
+            return require('./scanNfc.png');
+        }
         default: return require('./tokyo.jpeg');
     }
 }

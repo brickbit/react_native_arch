@@ -1,9 +1,10 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Routes } from "../../navigator/routes";
-import { ActivityIndicator, Alert, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, Alert, Image, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useNfcScannerContainer } from "./NfcScannerContainer";
 import React from "react";
 import { Base64Image } from "../views/BaseImage64";
+import { getAssetImage } from "../../../../assets/photos/AssetImage";
 
 
 type Props = NativeStackScreenProps<Routes, 'NfcScanner', 'FCMStack'>;
@@ -64,7 +65,10 @@ export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
                             </View>
                         </View>
                         :
-                        <View/>
+                        <Image
+                            source={getAssetImage('scanNfc')}
+                            style={styles.nfcImage}
+                        />
                     }
                     <View style={styles.column}>
                         <TextInput
@@ -98,7 +102,6 @@ export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
 const styles = StyleSheet.create({
     screen: {
         flexDirection: 'column',
-        justifyContent: 'space-between',
         height:'100%',
         width: '100%',
         backgroundColor: 'rgba(0,0,0,0.01)',
@@ -111,7 +114,7 @@ const styles = StyleSheet.create({
     },
     input: {
         color: 'black',
-        width: '90%',
+        width: 200,
         height: 40,
         borderWidth: 1,
         padding: 10,
@@ -134,7 +137,7 @@ const styles = StyleSheet.create({
         color: 'black',
     },
     button: {
-        width: '90%',
+        width: 200,
         textAlign: 'center',
         fontSize: 14,
         color: 'white',
@@ -163,6 +166,12 @@ const styles = StyleSheet.create({
         height: 125,
         marginEnd: 16,
         marginBottom: 16
+        
+    },
+    nfcImage: {
+        height: 190,
+        width: 200,
+        margin: 32,
     },
     row: {
         flexDirection: 'row',
@@ -171,5 +180,6 @@ const styles = StyleSheet.create({
     column: {
         flexDirection: 'column',
         alignContent: 'center',
+        alignItems: 'center'
     }
 });    
