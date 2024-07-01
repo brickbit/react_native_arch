@@ -10,12 +10,14 @@ export const useNfcScannerContainer = () => {
     const [ canNumber, setCanNumber ] = useState<string | undefined>('')
 
     const scanDocument = () => {
+        setError(null)
         setIsLoading(true);
         DocumentIdentifierManager.scanDocument(
             canNumber,
             (res: string) => {
                 const doc: DocumentDataBo = JSON.parse(res);
                 setDocumentData(doc);
+                setError(null)
                 setIsLoading(false);
             },
             (err: string) => {
@@ -33,6 +35,7 @@ export const useNfcScannerContainer = () => {
     }
 
     const onChangeNumber = (input: string|undefined) => {
+        setError(null)
         if(input != undefined) {
             setCanNumber(input)
         } else {

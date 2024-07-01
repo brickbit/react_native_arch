@@ -2,7 +2,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Routes } from "../../navigator/routes";
 import { ActivityIndicator, Alert, Image, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useNfcScannerContainer } from "./NfcScannerContainer";
-import React from "react";
+import React, { useEffect } from "react";
 import { Base64Image } from "../views/BaseImage64";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 
@@ -11,29 +11,20 @@ type Props = NativeStackScreenProps<Routes, 'NfcScanner', 'FCMStack'>;
 
 export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
     const { documentData, error, isLoading, canNumber, scanDocument, retry, onChangeNumber } = useNfcScannerContainer();
-    const number = ""
+    const number = ""    
 
-    const errorAlert = () =>
-    Alert.alert('Alert Title', 'My Alert Msg', [
-      {
-        text: 'Cancel',
-        onPress: () => console.log('Cancel Pressed'),
-        style: 'cancel',
-      },
-      {text: 'OK', onPress: () => console.log('OK Pressed')},
-    ]);
-    return (
+    useEffect(() => {
+        if(error!= null) {
+            Alert.alert('An error has occurred', 'Your document could not be authenticated. Try again', [
+                {text: 'OK', onPress: () => retry},
+              ]);
+        }
         
+      }, [{}, error]);
+
+    return (
         <View style={styles.screen}>
             <Text style={styles.title}>ID card reader with NFC</Text>
-            <Modal
-                        animationType="fade"
-                        transparent={true}
-                        visible={error != null}
-                        onRequestClose={() => {
-                        //setModalVisible(!modalVisible);
-                        }}
-                    ></Modal>
             {isLoading ? 
             <ActivityIndicator size={'large'} style={styles.spinner}/> :
                 <View>

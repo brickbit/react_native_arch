@@ -210,12 +210,21 @@ class DocumentIdentifierManager(private val reactContext: ReactApplicationContex
 
     @ReactMethod
     fun scanDocument(canNumber: String, successCallback: Callback, errorCallback: Callback) {
-        enableReaderMode(
-            canNumber = canNumber,
-            activity = reactContext.currentActivity!!,
-            onStage = {successCallback.invoke(it)},
-            onError = {errorCallback.invoke(it.type.name)}
-        )
+        try {
+            enableReaderMode(
+                canNumber = canNumber,
+                activity = reactContext.currentActivity!!,
+                onStage = {
+                    successCallback.invoke(it)
+                },
+                onError = {
+                    errorCallback.invoke(it.type.name)
+                }
+            )
+        } catch(e: Exception) {
+            successCallback.invoke(null);
+            errorCallback.invoke(null)
+        }
     }
 }
 
