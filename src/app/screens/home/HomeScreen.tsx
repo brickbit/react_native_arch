@@ -4,6 +4,7 @@ import { ActivityIndicator, FlatList, Image, NativeModules, StyleSheet, Text, To
 import { CityBo } from "../../../domain/model/CityBo";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 import { useCityContainer } from "./CityContainer";
+import { getLanguageName } from "../../utils/GetLanguageName";
 
 
 type Props = NativeStackScreenProps<Routes, 'Home', 'FCMStack'>;
@@ -43,7 +44,7 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
                 />
                 <View style={styles.detailCityBox}>
                     <Text style={styles.cardTitle}>{name}</Text>
-                    <Text style={styles.cardSubtitle}>{"In "+ name + " you will need to use " + currency + " and speak "+ language + " or use a translator"}</Text>
+                    <Text style={styles.cardSubtitle}>{"In "+ name + " you will need to use " + currency + " and speak "+ getLanguageName(language) + " or use a translator"}</Text>
                     <Text style={styles.cardAction}>Explore their places</Text>
                 </View>
                 

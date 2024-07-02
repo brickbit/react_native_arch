@@ -5,6 +5,7 @@ import { useNfcScannerContainer } from "./NfcScannerContainer";
 import React, { useEffect } from "react";
 import { Base64Image } from "../views/BaseImage64";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
+import { getErrorMessage } from "../../utils/MessageError";
 
 
 type Props = NativeStackScreenProps<Routes, 'NfcScanner', 'FCMStack'>;
@@ -14,8 +15,9 @@ export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
     const number = ""    
 
     useEffect(() => {
+        
         if(error!= null) {
-            Alert.alert('An error has occurred', 'Your document could not be authenticated. Try again', [
+            Alert.alert('An error has occurred', getErrorMessage(error), [
                 {text: 'OK', onPress: () => retry},
               ]);
         }
@@ -80,7 +82,6 @@ export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     
-                    <Text>Error: {error}</Text>
                 </View>
             }
         </View>
