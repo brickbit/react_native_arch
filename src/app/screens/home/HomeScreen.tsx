@@ -1,11 +1,29 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Routes } from "../../navigator/routes";
-import { ActivityIndicator, FlatList, Image, NativeModules, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { CityBo } from "../../../domain/model/CityBo";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 import { useCityContainer } from "./CityContainer";
 import { getLanguageName } from "../../utils/GetLanguageName";
+import { NativeModules } from 'react-native';
 
+const handleNativeCallbackFN = () => {
+    NativeModules.DocumentScan.salute((value: string | null) => {
+      console.log(value); // 'Hello World'
+    });
+  };
+
+const handleNativeAsyncFN = async (value: any) => {
+try {
+    const nativeResponse = await NativeModules.DocumentScan.saluteAsync();
+    console.log(value); // 'This is an async message: Hello World'
+} catch (error: any) {
+    console.log({
+    code: error.code, // "ERROR_CODE_1"
+    message: error.message, // "The greetings message is invalid"
+    });
+}
+};
 
 type Props = NativeStackScreenProps<Routes, 'Home', 'FCMStack'>;
 
@@ -36,7 +54,10 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
         let assetName = getAssetImage(name)
         return (
             <TouchableOpacity 
-                onPress={() =>{navigation.navigate('CityDetail', { id: item.id, name: item.name})}}
+                onPress={() =>{
+                    handleNativeCallbackFN()
+                    navigation.navigate('CityDetail', { id: item.id, name: item.name})}
+                }
             >
                 <Image
                     source={getAssetImage(name)}
