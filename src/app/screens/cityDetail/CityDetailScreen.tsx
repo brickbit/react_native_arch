@@ -33,8 +33,13 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
                         : <View/>
                     }
                 </View>
-                <Text style={styles.body}>Idioma: {getLanguageName(city?.language)}</Text>
-                <Text style={styles.body}>Currency: {city?.currency}</Text>
+                {city?.name != null ?
+                    <>
+                        <Text style={styles.body}>Idioma: {getLanguageName(city?.language)}</Text>
+                        <Text style={styles.body}>Currency: {city?.currency}</Text>
+                    </>
+                    : <View/>
+                }
             </View>
         );
     }
