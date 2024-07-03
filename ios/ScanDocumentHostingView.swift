@@ -10,27 +10,6 @@ import SwiftUI
 @objcMembers final class ScanDocumentHostingView: UIView {
   var view: UIView?
   var viewModel = ScanDocumentViewModel()
-
-  @objc
-  var onChangeBoldToggle: RCTBubblingEventBlock = { _ in } {
-    didSet {
-      viewModel.onChangeBoldToggle = onChangeBoldToggle
-    }
-  }
-
-  @objc
-  var onChangeItalicToggle: RCTBubblingEventBlock = { _ in } {
-    didSet {
-      viewModel.onChangeItalicToggle = onChangeItalicToggle
-    }
-  }
-
-  @objc
-  var onChangeUnderlineToggle: RCTBubblingEventBlock = { _ in } {
-    didSet {
-      viewModel.onChangeUnderlineToggle = onChangeUnderlineToggle
-    }
-  }
   
   override init(frame: CGRect) {
     super.init(frame: frame)

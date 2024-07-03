@@ -1,8 +1,7 @@
 
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Routes } from '../../navigator/routes';
-import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import { useState } from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { ScanDocumentView } from './native';
 
 
@@ -10,38 +9,10 @@ import { ScanDocumentView } from './native';
 type Props = NativeStackScreenProps<Routes, 'ScanDocumentView', 'FCMStack'>;
 
 export const ScanDocumentIos: React.FC<Props> =({ navigation }) => {
-    const nameArray = ["Alice", "Bob", "Charlie", "Can", "David", "Eve"];
-    const getRandomName = () => {
-        const randomIndex = Math.floor(Math.random() * nameArray.length);
-        return nameArray[randomIndex];
-      };
-    
-    const [currentName, setCurrentName] = useState(getRandomName);
-
-    const handleChangeName = () => {
-        setCurrentName(getRandomName)
-    }
-
-    const [isBold, setIsBold] = useState(false);
-    const [isItalic, setIsItalic] = useState(false);
-    const [isUnderline, setIsUnderline] = useState(false);
-
     return(
         <SafeAreaView style = { styles.container } >  
             <ScanDocumentView 
                 style={ styles.wrapper } 
-                onChangeBoldToggle={ event => {
-                    setIsBold(event.nativeEvent.isBold)
-                  }
-                }
-                onChangeItalicToggle={ event => {
-                  setIsItalic(event.nativeEvent.isItalic)
-                  }
-                }
-                onChangeUnderlineToggle={ event => {
-                  setIsUnderline(event.nativeEvent.isUnderline)
-                  }
-                }
             />   
         </SafeAreaView>
     );

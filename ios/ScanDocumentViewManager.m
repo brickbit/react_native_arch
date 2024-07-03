@@ -11,7 +11,5 @@
 @interface
 
 RCT_EXTERN_MODULE(ScanDocumentViewManager, RCTViewManager)
-RCT_EXPORT_VIEW_PROPERTY(onChangeBoldToggle, RCTDirectEventBlock)
-RCT_EXPORT_VIEW_PROPERTY(onChangeItalicToggle, RCTDirectEventBlock)
-RCT_EXPORT_VIEW_PROPERTY(onChangeUnderlineToggle, RCTDirectEventBlock)
+
 @end
