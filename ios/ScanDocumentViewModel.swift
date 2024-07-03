@@ -45,17 +45,12 @@ final class ScanDocumentViewModel: ObservableObject {
   
   func scanDocument(docNumber: String, birthDate: String, expiryDate: String) {
     Task {
-      print("Scanning...")
-      let pptNr = "CFM199998"
-      let dob = "920425"
-      let doe = "330609"
       let passportUtils = PassportUtils()
-      let mrzKey = passportUtils.getMRZKey( passportNumber: pptNr, dateOfBirth: dob, dateOfExpiry: doe)
-      print("mrz: \(mrzKey)")
+      let mrzKey = passportUtils.getMRZKey( passportNumber: docNumber, dateOfBirth: birthDate, dateOfExpiry: expiryDate)
       let customMessageHandler : (NFCViewDisplayMessage)->String? = { (displayMessage) in
           switch displayMessage {
               case .requestPresentPassport:
-                  return "Hold your iPhone near an NFC enabled passport."
+                  return "Hold your iPhone near an NFC enabled document ID."
               default:
                   // Return nil for all other messages so we use the provided default
                   return nil

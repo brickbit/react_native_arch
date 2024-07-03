@@ -27,13 +27,13 @@ struct ScanDocumentView: View {
         .padding(.horizontal,16)
         .padding(.top,8)
       Text("Select the document's expiry date").font(.system(size: 14))
-      DatePicker("", selection: $expiryDate, in: ...Date.now, displayedComponents: .date)
+      DatePicker("", selection: $expiryDate, in: Date.now..., displayedComponents: .date)
         .labelsHidden()
         .frame(maxWidth: .infinity)
         .padding(.horizontal,16)
         .padding(.top,8)
       Text("Select the document's support number").font(.system(size: 14))
-      TextField("Expiry date", text: $docNumber)
+      TextField("Support number", text: $docNumber)
         .textFieldStyle(.roundedBorder)
         .padding(.horizontal,16)
         .padding(.top,16)
@@ -56,7 +56,8 @@ struct PassportView: View {
     if(passportData == nil) {
       Image("scanNfc")
         .resizable()
-        .aspectRatio(contentMode: .fit)
+        .frame(height: 210)
+        .aspectRatio(contentMode: .fill)
         .textFieldStyle(.roundedBorder)
         .padding(16)
     } else {
@@ -89,10 +90,10 @@ struct PassportView: View {
               .aspectRatio(contentMode: .fit)
               .frame(width: 70, height: 40)
               .padding([.leading], 10.0)
-          }
+          }.padding(.bottom,8)
         }
         .padding()
-        .frame(height: 220)
+        .frame(height: 210)
         .background(.white)
         .cornerRadius(20)
         .overlay(
