@@ -1,7 +1,6 @@
 
 
 export const getLanguageName = (language?: string) => {
-    console.log('*'+language+'*')
     switch(language) {
          case 'nl':  {
              return 'dutch'

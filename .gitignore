@@ -51,3 +51,5 @@ vendor
 
 # Jest
 coverage
+
+ios/Podfile.lock

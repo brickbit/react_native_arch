@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Routes } from "../../navigator/routes";
-import { ActivityIndicator, Alert, Image, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, Alert, Image,  StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useNfcScannerContainer } from "./NfcScannerContainer";
 import React, { useEffect } from "react";
 import { Base64Image } from "../views/BaseImage64";
@@ -13,6 +13,7 @@ type Props = NativeStackScreenProps<Routes, 'NfcScanner', 'FCMStack'>;
 export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
     const { documentData, error, isLoading, canNumber, scanDocument, retry, onChangeNumber } = useNfcScannerContainer();
     const number = ""    
+
 
     useEffect(() => {
         
@@ -78,7 +79,7 @@ export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
                                 scanDocument()
                             }}  
                         >
-                        <Text style={styles.button}>Start scanning</Text>
+                            <Text style={styles.button}>Start scanning</Text>
                         </TouchableOpacity>
                     </View>
                     
@@ -87,6 +88,8 @@ export const NfcScannerScreen: React.FC<Props> =({ navigation }) => {
         </View>
     );
 }
+
+
 
 
 
