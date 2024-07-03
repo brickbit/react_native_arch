@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import NFCPassportReader
 
 struct ScanDocumentView: View {
   @ObservedObject var viewModel: ScanDocumentViewModel

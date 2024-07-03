@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NFCPassportReader
 
 final class ScanDocumentViewModel: ObservableObject {
   @Published var passportData: NFCPassportModel? = nil
