@@ -14,6 +14,46 @@
 		05EF94092C35618B009A453E /* ScanDocumentHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */; };
 		05EF940B2C35691F009A453E /* ScanDocumentViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */; };
 		05EF940D2C356957009A453E /* ScanDocumentViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */; };
+		05EF94692C35C3BF009A453E /* PassportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94682C35C3BF009A453E /* PassportUtils.swift */; };
+		05EF946E2C35C5FA009A453E /* COM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF946D2C35C5FA009A453E /* COM.swift */; };
+		05EF94702C35C617009A453E /* DataGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF946F2C35C617009A453E /* DataGroup.swift */; };
+		05EF94722C35C632009A453E /* DataGroupId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94712C35C632009A453E /* DataGroupId.swift */; };
+		05EF94742C35C680009A453E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94732C35C680009A453E /* Utils.swift */; };
+		05EF94762C35C6E2009A453E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94752C35C6E2009A453E /* Errors.swift */; };
+		05EF94782C35C720009A453E /* SecureMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94772C35C720009A453E /* SecureMessaging.swift */; };
+		05EF947A2C35C74A009A453E /* ResponseAPDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94792C35C74A009A453E /* ResponseAPDU.swift */; };
+		05EF947C2C35C793009A453E /* AES_3DES_DESEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF947B2C35C793009A453E /* AES_3DES_DESEncryption.swift */; };
+		05EF947E2C35C7C9009A453E /* DataGroup1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF947D2C35C7C9009A453E /* DataGroup1.swift */; };
+		05EF94802C35C7D3009A453E /* DataGroup2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF947F2C35C7D3009A453E /* DataGroup2.swift */; };
+		05EF94822C35C7ED009A453E /* DataGroup7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94812C35C7ED009A453E /* DataGroup7.swift */; };
+		05EF94842C35C811009A453E /* DataGroup11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94832C35C811009A453E /* DataGroup11.swift */; };
+		05EF94862C35C828009A453E /* DataGroup12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94852C35C828009A453E /* DataGroup12.swift */; };
+		05EF94882C35C83F009A453E /* DataGroup14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94872C35C83F009A453E /* DataGroup14.swift */; };
+		05EF948A2C35C892009A453E /* SimpleASN1DumpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94892C35C892009A453E /* SimpleASN1DumpParser.swift */; };
+		05EF948C2C35C8C6009A453E /* SecurityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF948B2C35C8C6009A453E /* SecurityInfo.swift */; };
+		05EF948E2C35C914009A453E /* ChipAuthenticationPublicKeyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF948D2C35C914009A453E /* ChipAuthenticationPublicKeyInfo.swift */; };
+		05EF94902C35C932009A453E /* PaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF948F2C35C932009A453E /* PaceInfo.swift */; };
+		05EF94922C35C958009A453E /* ChipAuthenticationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94912C35C958009A453E /* ChipAuthenticationInfo.swift */; };
+		05EF94942C35C979009A453E /* ActiveAuthenticationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94932C35C979009A453E /* ActiveAuthenticationInfo.swift */; };
+		05EF94962C35C9A5009A453E /* NotImplementedDG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94952C35C9A5009A453E /* NotImplementedDG.swift */; };
+		05EF94982C35C9B8009A453E /* SOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94972C35C9B8009A453E /* SOD.swift */; };
+		05EF949A2C35C9EB009A453E /* OpenSSLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94992C35C9EB009A453E /* OpenSSLUtils.swift */; };
+		05EF949C2C35CA26009A453E /* X509Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF949B2C35CA26009A453E /* X509Wrapper.swift */; };
+		05EF949E2C35CA8B009A453E /* CardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF949D2C35CA8B009A453E /* CardAccess.swift */; };
+		05EF94A02C35CAE6009A453E /* BACHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF949F2C35CAE6009A453E /* BACHandler.swift */; };
+		05EF94A22C35CB03009A453E /* TagReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94A12C35CB03009A453E /* TagReader.swift */; };
+		05EF94A42C35CB3E009A453E /* SecureMessagingSessionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94A32C35CB3E009A453E /* SecureMessagingSessionGenerator.swift */; };
+		05EF94A62C35CB66009A453E /* DataGroupHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94A52C35CB66009A453E /* DataGroupHash.swift */; };
+		05EF94A82C35CB85009A453E /* DataGroupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94A72C35CB85009A453E /* DataGroupParser.swift */; };
+		05EF94AA2C35CBA6009A453E /* DataGroup15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94A92C35CBA6009A453E /* DataGroup15.swift */; };
+		05EF94AC2C35CBEB009A453E /* ChipAuthenticationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94AB2C35CBEB009A453E /* ChipAuthenticationHandler.swift */; };
+		05EF94AE2C35CC3B009A453E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94AD2C35CC3B009A453E /* Logging.swift */; };
+		05EF94B12C35CC5D009A453E /* FaceImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94B02C35CC5D009A453E /* FaceImageInfo.swift */; };
+		05EF94B32C35CCA1009A453E /* NFCPassportReaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94B22C35CCA1009A453E /* NFCPassportReaderModel.swift */; };
+		05EF94B52C35CCC2009A453E /* NFCViewDisplayMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94B42C35CCC2009A453E /* NFCViewDisplayMessage.swift */; };
+		05EF94B72C35CCF6009A453E /* PACEHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94B62C35CCF6009A453E /* PACEHandler.swift */; };
+		05EF94B92C35CD13009A453E /* PassportReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94B82C35CD13009A453E /* PassportReader.swift */; };
+		05EF94BB2C36029C009A453E /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94BA2C36029C009A453E /* DateUtils.swift */; };
 		0C80B921A6F3F58F76C31292 /* libPods-fcmTravelGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-fcmTravelGuide.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -41,6 +81,47 @@
 		05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentHostingView.swift; sourceTree = "<group>"; };
 		05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDocumentViewManager.m; sourceTree = "<group>"; };
 		05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentViewManager.swift; sourceTree = "<group>"; };
+		05EF94682C35C3BF009A453E /* PassportUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportUtils.swift; sourceTree = "<group>"; };
+		05EF946A2C35C524009A453E /* fcmTravelGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = fcmTravelGuide.entitlements; path = fcmTravelGuide/fcmTravelGuide.entitlements; sourceTree = "<group>"; };
+		05EF946D2C35C5FA009A453E /* COM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COM.swift; sourceTree = "<group>"; };
+		05EF946F2C35C617009A453E /* DataGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup.swift; sourceTree = "<group>"; };
+		05EF94712C35C632009A453E /* DataGroupId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroupId.swift; sourceTree = "<group>"; };
+		05EF94732C35C680009A453E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		05EF94752C35C6E2009A453E /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		05EF94772C35C720009A453E /* SecureMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureMessaging.swift; sourceTree = "<group>"; };
+		05EF94792C35C74A009A453E /* ResponseAPDU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAPDU.swift; sourceTree = "<group>"; };
+		05EF947B2C35C793009A453E /* AES_3DES_DESEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES_3DES_DESEncryption.swift; sourceTree = "<group>"; };
+		05EF947D2C35C7C9009A453E /* DataGroup1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup1.swift; sourceTree = "<group>"; };
+		05EF947F2C35C7D3009A453E /* DataGroup2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup2.swift; sourceTree = "<group>"; };
+		05EF94812C35C7ED009A453E /* DataGroup7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup7.swift; sourceTree = "<group>"; };
+		05EF94832C35C811009A453E /* DataGroup11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup11.swift; sourceTree = "<group>"; };
+		05EF94852C35C828009A453E /* DataGroup12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup12.swift; sourceTree = "<group>"; };
+		05EF94872C35C83F009A453E /* DataGroup14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup14.swift; sourceTree = "<group>"; };
+		05EF94892C35C892009A453E /* SimpleASN1DumpParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleASN1DumpParser.swift; sourceTree = "<group>"; };
+		05EF948B2C35C8C6009A453E /* SecurityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityInfo.swift; sourceTree = "<group>"; };
+		05EF948D2C35C914009A453E /* ChipAuthenticationPublicKeyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipAuthenticationPublicKeyInfo.swift; sourceTree = "<group>"; };
+		05EF948F2C35C932009A453E /* PaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceInfo.swift; sourceTree = "<group>"; };
+		05EF94912C35C958009A453E /* ChipAuthenticationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipAuthenticationInfo.swift; sourceTree = "<group>"; };
+		05EF94932C35C979009A453E /* ActiveAuthenticationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAuthenticationInfo.swift; sourceTree = "<group>"; };
+		05EF94952C35C9A5009A453E /* NotImplementedDG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotImplementedDG.swift; sourceTree = "<group>"; };
+		05EF94972C35C9B8009A453E /* SOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOD.swift; sourceTree = "<group>"; };
+		05EF94992C35C9EB009A453E /* OpenSSLUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSSLUtils.swift; sourceTree = "<group>"; };
+		05EF949B2C35CA26009A453E /* X509Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X509Wrapper.swift; sourceTree = "<group>"; };
+		05EF949D2C35CA8B009A453E /* CardAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAccess.swift; sourceTree = "<group>"; };
+		05EF949F2C35CAE6009A453E /* BACHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACHandler.swift; sourceTree = "<group>"; };
+		05EF94A12C35CB03009A453E /* TagReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagReader.swift; sourceTree = "<group>"; };
+		05EF94A32C35CB3E009A453E /* SecureMessagingSessionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureMessagingSessionGenerator.swift; sourceTree = "<group>"; };
+		05EF94A52C35CB66009A453E /* DataGroupHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroupHash.swift; sourceTree = "<group>"; };
+		05EF94A72C35CB85009A453E /* DataGroupParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroupParser.swift; sourceTree = "<group>"; };
+		05EF94A92C35CBA6009A453E /* DataGroup15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroup15.swift; sourceTree = "<group>"; };
+		05EF94AB2C35CBEB009A453E /* ChipAuthenticationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipAuthenticationHandler.swift; sourceTree = "<group>"; };
+		05EF94AD2C35CC3B009A453E /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		05EF94B02C35CC5D009A453E /* FaceImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageInfo.swift; sourceTree = "<group>"; };
+		05EF94B22C35CCA1009A453E /* NFCPassportReaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPassportReaderModel.swift; sourceTree = "<group>"; };
+		05EF94B42C35CCC2009A453E /* NFCViewDisplayMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewDisplayMessage.swift; sourceTree = "<group>"; };
+		05EF94B62C35CCF6009A453E /* PACEHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PACEHandler.swift; sourceTree = "<group>"; };
+		05EF94B82C35CD13009A453E /* PassportReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportReader.swift; sourceTree = "<group>"; };
+		05EF94BA2C36029C009A453E /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* fcmTravelGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fcmTravelGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = fcmTravelGuide/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = fcmTravelGuide/AppDelegate.m; sourceTree = "<group>"; };
@@ -94,21 +175,118 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		05EF946B2C35C5C9009A453E /* passportReader */ = {
+			isa = PBXGroup;
+			children = (
+				05EF947B2C35C793009A453E /* AES_3DES_DESEncryption.swift */,
+				05EF949F2C35CAE6009A453E /* BACHandler.swift */,
+				05EF94AB2C35CBEB009A453E /* ChipAuthenticationHandler.swift */,
+				05EF94A52C35CB66009A453E /* DataGroupHash.swift */,
+				05EF94A72C35CB85009A453E /* DataGroupParser.swift */,
+				05EF946C2C35C5D8009A453E /* dataGroups */,
+				05EF94752C35C6E2009A453E /* Errors.swift */,
+				05EF94AD2C35CC3B009A453E /* Logging.swift */,
+				05EF94AF2C35CC52009A453E /* model */,
+				05EF94B22C35CCA1009A453E /* NFCPassportReaderModel.swift */,
+				05EF94B42C35CCC2009A453E /* NFCViewDisplayMessage.swift */,
+				05EF94992C35C9EB009A453E /* OpenSSLUtils.swift */,
+				05EF94792C35C74A009A453E /* ResponseAPDU.swift */,
+				05EF94772C35C720009A453E /* SecureMessaging.swift */,
+				05EF94A32C35CB3E009A453E /* SecureMessagingSessionGenerator.swift */,
+				05EF94892C35C892009A453E /* SimpleASN1DumpParser.swift */,
+				05EF94A12C35CB03009A453E /* TagReader.swift */,
+				05EF94732C35C680009A453E /* Utils.swift */,
+				05EF949B2C35CA26009A453E /* X509Wrapper.swift */,
+				05EF94B62C35CCF6009A453E /* PACEHandler.swift */,
+				05EF94B82C35CD13009A453E /* PassportReader.swift */,
+			);
+			name = passportReader;
+			sourceTree = "<group>";
+		};
+		05EF946C2C35C5D8009A453E /* dataGroups */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94932C35C979009A453E /* ActiveAuthenticationInfo.swift */,
+				05EF949D2C35CA8B009A453E /* CardAccess.swift */,
+				05EF94912C35C958009A453E /* ChipAuthenticationInfo.swift */,
+				05EF948D2C35C914009A453E /* ChipAuthenticationPublicKeyInfo.swift */,
+				05EF946D2C35C5FA009A453E /* COM.swift */,
+				05EF946F2C35C617009A453E /* DataGroup.swift */,
+				05EF947D2C35C7C9009A453E /* DataGroup1.swift */,
+				05EF947F2C35C7D3009A453E /* DataGroup2.swift */,
+				05EF94812C35C7ED009A453E /* DataGroup7.swift */,
+				05EF94832C35C811009A453E /* DataGroup11.swift */,
+				05EF94852C35C828009A453E /* DataGroup12.swift */,
+				05EF94872C35C83F009A453E /* DataGroup14.swift */,
+				05EF94A92C35CBA6009A453E /* DataGroup15.swift */,
+				05EF94712C35C632009A453E /* DataGroupId.swift */,
+				05EF94952C35C9A5009A453E /* NotImplementedDG.swift */,
+				05EF948F2C35C932009A453E /* PaceInfo.swift */,
+				05EF948B2C35C8C6009A453E /* SecurityInfo.swift */,
+				05EF94972C35C9B8009A453E /* SOD.swift */,
+			);
+			name = dataGroups;
+			sourceTree = "<group>";
+		};
+		05EF94AF2C35CC52009A453E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94B02C35CC5D009A453E /* FaceImageInfo.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		05EF94BC2C3602B7009A453E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94682C35C3BF009A453E /* PassportUtils.swift */,
+				05EF94BA2C36029C009A453E /* DateUtils.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		05EF94BD2C3602D2009A453E /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */,
+				05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		05EF94BE2C3602EA009A453E /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94042C355FF2009A453E /* ScanDocumentView.swift */,
+				05EF94062C35610B009A453E /* ScanDocumentViewModel.swift */,
+			);
+			name = screen;
+			sourceTree = "<group>";
+		};
+		05EF94BF2C360301009A453E /* hosting */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */,
+			);
+			name = hosting;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* fcmTravelGuide */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				0530426A2C341BF6007EB0D2 /* fcmTravelGuide-Bridging-Header.h */,
+				05EF946A2C35C524009A453E /* fcmTravelGuide.entitlements */,
+				05EF94BF2C360301009A453E /* hosting */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				0530426A2C341BF6007EB0D2 /* fcmTravelGuide-Bridging-Header.h */,
-				05EF94042C355FF2009A453E /* ScanDocumentView.swift */,
-				05EF94062C35610B009A453E /* ScanDocumentViewModel.swift */,
-				05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */,
-				05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */,
-				05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */,
+				05EF94BD2C3602D2009A453E /* managers */,
+				05EF946B2C35C5C9009A453E /* passportReader */,
+				05EF94BE2C3602EA009A453E /* screen */,
+				05EF94BC2C3602B7009A453E /* utils */,
 			);
 			name = fcmTravelGuide;
 			sourceTree = "<group>";
@@ -429,13 +607,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EF94A82C35CB85009A453E /* DataGroupParser.swift in Sources */,
 				05EF940B2C35691F009A453E /* ScanDocumentViewManager.m in Sources */,
+				05EF948C2C35C8C6009A453E /* SecurityInfo.swift in Sources */,
+				05EF94842C35C811009A453E /* DataGroup11.swift in Sources */,
+				05EF949E2C35CA8B009A453E /* CardAccess.swift in Sources */,
+				05EF94AA2C35CBA6009A453E /* DataGroup15.swift in Sources */,
+				05EF94AE2C35CC3B009A453E /* Logging.swift in Sources */,
+				05EF949C2C35CA26009A453E /* X509Wrapper.swift in Sources */,
 				05EF93F22C3556A5009A453E /* AppDelegate.m in Sources */,
+				05EF94A22C35CB03009A453E /* TagReader.swift in Sources */,
+				05EF94722C35C632009A453E /* DataGroupId.swift in Sources */,
+				05EF94942C35C979009A453E /* ActiveAuthenticationInfo.swift in Sources */,
+				05EF949A2C35C9EB009A453E /* OpenSSLUtils.swift in Sources */,
+				05EF94982C35C9B8009A453E /* SOD.swift in Sources */,
+				05EF94882C35C83F009A453E /* DataGroup14.swift in Sources */,
+				05EF94BB2C36029C009A453E /* DateUtils.swift in Sources */,
+				05EF94B72C35CCF6009A453E /* PACEHandler.swift in Sources */,
+				05EF94782C35C720009A453E /* SecureMessaging.swift in Sources */,
+				05EF947C2C35C793009A453E /* AES_3DES_DESEncryption.swift in Sources */,
 				05EF94052C355FF2009A453E /* ScanDocumentView.swift in Sources */,
+				05EF94692C35C3BF009A453E /* PassportUtils.swift in Sources */,
+				05EF94B92C35CD13009A453E /* PassportReader.swift in Sources */,
+				05EF94902C35C932009A453E /* PaceInfo.swift in Sources */,
+				05EF94822C35C7ED009A453E /* DataGroup7.swift in Sources */,
+				05EF94AC2C35CBEB009A453E /* ChipAuthenticationHandler.swift in Sources */,
+				05EF94A62C35CB66009A453E /* DataGroupHash.swift in Sources */,
 				05EF940D2C356957009A453E /* ScanDocumentViewManager.swift in Sources */,
+				05EF946E2C35C5FA009A453E /* COM.swift in Sources */,
+				05EF94862C35C828009A453E /* DataGroup12.swift in Sources */,
+				05EF94762C35C6E2009A453E /* Errors.swift in Sources */,
+				05EF947E2C35C7C9009A453E /* DataGroup1.swift in Sources */,
+				05EF94922C35C958009A453E /* ChipAuthenticationInfo.swift in Sources */,
 				05EF94072C35610B009A453E /* ScanDocumentViewModel.swift in Sources */,
+				05EF94702C35C617009A453E /* DataGroup.swift in Sources */,
+				05EF94962C35C9A5009A453E /* NotImplementedDG.swift in Sources */,
 				05EF94092C35618B009A453E /* ScanDocumentHostingView.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				05EF948E2C35C914009A453E /* ChipAuthenticationPublicKeyInfo.swift in Sources */,
+				05EF94A02C35CAE6009A453E /* BACHandler.swift in Sources */,
+				05EF94B32C35CCA1009A453E /* NFCPassportReaderModel.swift in Sources */,
+				05EF94B12C35CC5D009A453E /* FaceImageInfo.swift in Sources */,
+				05EF947A2C35C74A009A453E /* ResponseAPDU.swift in Sources */,
+				05EF94A42C35CB3E009A453E /* SecureMessagingSessionGenerator.swift in Sources */,
+				05EF94802C35C7D3009A453E /* DataGroup2.swift in Sources */,
+				05EF948A2C35C892009A453E /* SimpleASN1DumpParser.swift in Sources */,
+				05EF94742C35C680009A453E /* Utils.swift in Sources */,
+				05EF94B52C35CCC2009A453E /* NFCViewDisplayMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = fcmTravelGuide/fcmTravelGuide.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J228V9FX88;
 				ENABLE_BITCODE = NO;
@@ -539,6 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = fcmTravelGuide/fcmTravelGuide.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J228V9FX88;
 				INFOPLIST_FILE = fcmTravelGuide/Info.plist;

@@ -27,17 +27,7 @@ export const ScanDocumentIos: React.FC<Props> =({ navigation }) => {
     const [isUnderline, setIsUnderline] = useState(false);
 
     return(
-        <SafeAreaView style = { styles.container } >
-            <View style = { styles.wrapper }>
-            <Text style={{ 
-                fontSize: 50,
-                color: 'red',
-                fontWeight: isBold ? 'bold' : 'normal',
-                fontStyle: isItalic ? 'italic' : 'normal',
-                textDecorationLine: isUnderline ? 'underline' : 'none',
-                }}>{currentName}</Text>
-            <Button title = "Change Name" onPress = { handleChangeName } />
-            </View>   
+        <SafeAreaView style = { styles.container } >  
             <ScanDocumentView 
                 style={ styles.wrapper } 
                 onChangeBoldToggle={ event => {
