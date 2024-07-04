@@ -1,9 +1,10 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Routes } from "../../navigator/routes";
-import { ActivityIndicator, FlatList, Image, NativeModules, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, FlatList, Image, NativeModules, Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { CityBo } from "../../../domain/model/CityBo";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 import { useCityContainer } from "./CityContainer";
+import { getLanguageName } from "../../utils/GetLanguageName";
 
 
 type Props = NativeStackScreenProps<Routes, 'Home', 'FCMStack'>;
@@ -13,13 +14,20 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
     
     if (isLoading) return <ActivityIndicator size={'large'} style={styles.spinner}/>
 
-    const _keyExtractor = (item: any, index: { toString: () => any;}) => index.toString()
+    const _keyExtractor = (item: any, index: { toString: () => string;}) => index.toString()
 
     const _getHeader = () =>  {
         
         return (
             <>
-                <TouchableOpacity style={styles.infoBox} onPress={()=>{navigation.navigate('NfcScanner')}}>
+                <TouchableOpacity style={styles.infoBox} onPress={()=>{
+                    if(Platform.OS === 'ios') {
+                        navigation.navigate('ScanDocumentView')
+                    } else {
+                        navigation.navigate('NfcScanner')
+                    }
+                    
+                    }}>
                     <Text style={styles.cardTitle}>Click here to scan your document ID</Text>
                 </TouchableOpacity>
                 <Text style={styles.title}>Cities to visit</Text>
@@ -29,10 +37,10 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
 
   
     const _renderItem = ({item}: any) => {
-        const name = (item as CityBo).name
-        const language = (item as CityBo).language
-        const currency = (item as CityBo).currency
-        let assetName = getAssetImage(name)
+        const name = (item as CityBo).name;
+        const language = (item as CityBo).language;
+        const currency = (item as CityBo).currency;
+        let assetName = getAssetImage(name);
         return (
             <TouchableOpacity 
                 onPress={() =>{navigation.navigate('CityDetail', { id: item.id, name: item.name})}}
@@ -43,7 +51,7 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
                 />
                 <View style={styles.detailCityBox}>
                     <Text style={styles.cardTitle}>{name}</Text>
-                    <Text style={styles.cardSubtitle}>{"In "+ name + " you will need to use " + currency + " and speak "+ language + " or use a translator"}</Text>
+                    <Text style={styles.cardSubtitle}>{"In "+ name + " you will need to use " + currency + " and speak "+ getLanguageName(language) + " or use a translator"}</Text>
                     <Text style={styles.cardAction}>Explore their places</Text>
                 </View>
                 

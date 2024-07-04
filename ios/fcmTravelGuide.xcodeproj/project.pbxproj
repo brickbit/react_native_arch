@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* fcmTravelGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* fcmTravelGuideTests.m */; };
+		05EF93F22C3556A5009A453E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		05EF94052C355FF2009A453E /* ScanDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94042C355FF2009A453E /* ScanDocumentView.swift */; };
+		05EF94072C35610B009A453E /* ScanDocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94062C35610B009A453E /* ScanDocumentViewModel.swift */; };
+		05EF94092C35618B009A453E /* ScanDocumentHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */; };
+		05EF940B2C35691F009A453E /* ScanDocumentViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */; };
+		05EF940D2C356957009A453E /* ScanDocumentViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */; };
+		05EF94692C35C3BF009A453E /* PassportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94682C35C3BF009A453E /* PassportUtils.swift */; };
+		05EF94BB2C36029C009A453E /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EF94BA2C36029C009A453E /* DateUtils.swift */; };
 		0C80B921A6F3F58F76C31292 /* libPods-fcmTravelGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-fcmTravelGuide.a */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-fcmTravelGuide-fcmTravelGuideTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-fcmTravelGuide-fcmTravelGuideTests.a */; };
@@ -30,9 +37,18 @@
 		00E356EE1AD99517003FC87E /* fcmTravelGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fcmTravelGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* fcmTravelGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fcmTravelGuideTests.m; sourceTree = "<group>"; };
+		0530426A2C341BF6007EB0D2 /* fcmTravelGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fcmTravelGuide-Bridging-Header.h"; sourceTree = "<group>"; };
+		05EF94042C355FF2009A453E /* ScanDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentView.swift; sourceTree = "<group>"; };
+		05EF94062C35610B009A453E /* ScanDocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentViewModel.swift; sourceTree = "<group>"; };
+		05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentHostingView.swift; sourceTree = "<group>"; };
+		05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDocumentViewManager.m; sourceTree = "<group>"; };
+		05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDocumentViewManager.swift; sourceTree = "<group>"; };
+		05EF94682C35C3BF009A453E /* PassportUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportUtils.swift; sourceTree = "<group>"; };
+		05EF946A2C35C524009A453E /* fcmTravelGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = fcmTravelGuide.entitlements; path = fcmTravelGuide/fcmTravelGuide.entitlements; sourceTree = "<group>"; };
+		05EF94BA2C36029C009A453E /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* fcmTravelGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fcmTravelGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = fcmTravelGuide/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = fcmTravelGuide/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = fcmTravelGuide/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = fcmTravelGuide/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fcmTravelGuide/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = fcmTravelGuide/main.m; sourceTree = "<group>"; };
@@ -83,15 +99,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		05EF94BC2C3602B7009A453E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94682C35C3BF009A453E /* PassportUtils.swift */,
+				05EF94BA2C36029C009A453E /* DateUtils.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		05EF94BD2C3602D2009A453E /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				05EF940A2C35691F009A453E /* ScanDocumentViewManager.m */,
+				05EF940C2C356957009A453E /* ScanDocumentViewManager.swift */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		05EF94BE2C3602EA009A453E /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94042C355FF2009A453E /* ScanDocumentView.swift */,
+				05EF94062C35610B009A453E /* ScanDocumentViewModel.swift */,
+			);
+			name = screen;
+			sourceTree = "<group>";
+		};
+		05EF94BF2C360301009A453E /* hosting */ = {
+			isa = PBXGroup;
+			children = (
+				05EF94082C35618B009A453E /* ScanDocumentHostingView.swift */,
+			);
+			name = hosting;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* fcmTravelGuide */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				0530426A2C341BF6007EB0D2 /* fcmTravelGuide-Bridging-Header.h */,
+				05EF946A2C35C524009A453E /* fcmTravelGuide.entitlements */,
+				05EF94BF2C360301009A453E /* hosting */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				05EF94BD2C3602D2009A453E /* managers */,
+				05EF94BE2C3602EA009A453E /* screen */,
+				05EF94BC2C3602B7009A453E /* utils */,
 			);
 			name = fcmTravelGuide;
 			sourceTree = "<group>";
@@ -207,7 +264,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -412,7 +469,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				05EF940B2C35691F009A453E /* ScanDocumentViewManager.m in Sources */,
+				05EF93F22C3556A5009A453E /* AppDelegate.m in Sources */,
+				05EF94BB2C36029C009A453E /* DateUtils.swift in Sources */,
+				05EF94052C355FF2009A453E /* ScanDocumentView.swift in Sources */,
+				05EF94692C35C3BF009A453E /* PassportUtils.swift in Sources */,
+				05EF940D2C356957009A453E /* ScanDocumentViewManager.swift in Sources */,
+				05EF94072C35610B009A453E /* ScanDocumentViewModel.swift in Sources */,
+				05EF94092C35618B009A453E /* ScanDocumentHostingView.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-fcmTravelGuide-fcmTravelGuideTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-fcmTravelGuide-fcmTravelGuideTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = fcmTravelGuideTests/Info.plist;
@@ -485,9 +551,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = fcmTravelGuide/fcmTravelGuide.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J228V9FX88;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = fcmTravelGuide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = fcmTravelGuide;
+				SWIFT_OBJC_BRIDGING_HEADER = "fcmTravelGuide-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -512,8 +582,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = fcmTravelGuide/fcmTravelGuide.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J228V9FX88;
 				INFOPLIST_FILE = fcmTravelGuide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +599,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = fcmTravelGuide;
+				SWIFT_OBJC_BRIDGING_HEADER = "fcmTravelGuide-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

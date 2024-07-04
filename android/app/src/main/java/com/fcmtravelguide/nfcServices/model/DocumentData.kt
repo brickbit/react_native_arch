@@ -1,4 +1,4 @@
-package com.fcmtravelguide.nfcServices
+package com.fcmtravelguide.nfcServices.model
 
 
 data class DocumentData(

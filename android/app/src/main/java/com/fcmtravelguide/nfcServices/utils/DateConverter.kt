@@ -1,4 +1,4 @@
-package com.fcmtravelguide.nfcServices
+package com.fcmtravelguide.nfcServices.utils
 
 import java.text.ParseException
 import java.text.SimpleDateFormat

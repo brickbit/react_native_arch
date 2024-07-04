@@ -10,7 +10,7 @@ export const useCityContainer = () => {
   
     useEffect(() => {
         if(isLoading){
-            setIsLoading(loading)
+            setIsLoading(loading);
         }
         if (data) {
             setCities(data);

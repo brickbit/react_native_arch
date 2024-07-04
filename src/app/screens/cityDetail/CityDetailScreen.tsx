@@ -5,6 +5,7 @@ import { ActivityIndicator, FlatList, Image, ScrollView, StyleSheet, Text, Touch
 import { useDetailCityContainer } from "./CityDetailContainer";
 import { getAssetImage } from "../../../../assets/photos/AssetImage";
 import { usePlacesContainer } from "./PlacesContainer";
+import { getLanguageName } from "../../utils/GetLanguageName";
 
 type Props = NativeStackScreenProps<Routes, 'CityDetail', 'FCMStack'>;
 
@@ -15,18 +16,27 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
 
     if (isLoading && isLoadingPlaces) return <ActivityIndicator size={'large'} style={styles.spinner}/>
 
-    const _keyExtractor = (item: any, index: { toString: () => any;}) => index.toString()
+    const _keyExtractor = (item: any, index: { toString: () => string;}) => index.toString();
 
     const _getHeader = () => {
         return  (
             <View>
+                <View>
+                    {city?.name != null ?
+                        <>
+                            <Image
+                                    source={getAssetImage(city?.name)}
+                                    style={styles.image}
+                                />
+                            <Text style={styles.title}>{city?.name}</Text>
+                        </>
+                        : <View/>
+                    }
+                </View>
                 {city?.name != null ?
                     <>
-                        <Image
-                                source={getAssetImage(city?.name)}
-                                style={styles.image}
-                            />
-                        <Text style={styles.title}>{city?.name}</Text>
+                        <Text style={styles.body}>Idioma: {getLanguageName(city?.language)}</Text>
+                        <Text style={styles.body}>Currency: {city?.currency}</Text>
                     </>
                     : <View/>
                 }
@@ -74,6 +84,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: 'rgba(0,0,0,0.5)',
         bottom: 0
+    },
+    body: {
+        fontSize: 16,
+        color: 'black',
+        fontWeight: 'bold',
+        marginHorizontal: 16,
+        marginVertical: 8,
     },
     list: {
     },

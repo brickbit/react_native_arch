@@ -7,6 +7,7 @@ import { HomeScreen } from "../screens/home/HomeScreen";
 import { getAssetImage } from "../../../assets/photos/AssetImage";
 import { CityDetailScreen } from "../screens/cityDetail/CityDetailScreen";
 import { NfcScannerScreen } from "../screens/nfcScanner/NfcScannerScreen";
+import { ScanDocumentIos } from "../screens/iosNativeView/ScanDocumentIos";
 
 const Stack = createNativeStackNavigator<Routes>();
 enableScreens();
@@ -42,6 +43,18 @@ export default function Navigator() {
                 <Stack.Screen
                     name="NfcScanner"
                     component={NfcScannerScreen}
+                    options={{
+                        headerTitle: (props) =>
+                            <Image 
+                                source={getAssetImage('FCMLogo')}
+                                style={styles.imageHeader}
+                            />,
+                        headerTitleAlign: 'center'
+                    }}
+                />
+                <Stack.Screen
+                    name="ScanDocumentView"
+                    component={ScanDocumentIos}
                     options={{
                         headerTitle: (props) =>
                             <Image 
