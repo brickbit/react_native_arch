@@ -1,4 +1,4 @@
-package com.fcmtravelguide.nfcServices
+package com.fcmtravelguide.nfcServices.model
 
 enum class NfcErrorType {
     DEVICE_INCOMPATIBLE,

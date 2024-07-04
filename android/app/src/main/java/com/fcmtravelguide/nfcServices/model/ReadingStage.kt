@@ -1,4 +1,4 @@
-package com.fcmtravelguide.nfcServices
+package com.fcmtravelguide.nfcServices.model
 
 sealed class ReadingStage {
     object None: ReadingStage()
