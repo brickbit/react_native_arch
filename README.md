@@ -50,7 +50,46 @@ query {
 
 React native community recommends Apollo Client as the best library to use GraphQL in mobile (Visit https://www.apollographql.com/docs/react/)
 
+## Solution
 
+The application is composed of a main view with direct access to the ID document reading screen and a list of cities obtained through a graphql endpoint. By clicking on each of the cities we will go to the city detail screen.
+
+In the city detail, the city data and the monuments and restaurants of said city are shown through another graphql endpoint.
+
+The passport reading screen shows a button to scan the document and some input fields that make it possible to scan the document. Once the document is scanned, the information about said document is displayed.
+
+## About the native bridge
+
+The native bridge of the android application runs the NFC reader and performs the necessary operations for reading the document by displaying the entire process in a view in React Native.
+
+The native bridge of the iOS app runs the NFC reader and performs the operations necessary for reading the document in a native view in SwiftUI.
+
+This process could have been done the other way around and implemented the NFC reader in a native view on android and in a React Native view on iOS.
+
+## About the NFC Document Reader
+To read the NFC document on Android, you will have to enter the CAN number of your document and click on the "Scan document" button. The NFC reader will be activated and you will be able to bring the document closer to your device. When the device makes a sound, it will begin reading the document and you should not move the document until the reading has finished (note that it is necessary for the document to be very close to the chip. Some failures may occur before finding the optimal reading area).
+
+
+To read the NFC document on iPhone, you must enter the date of birth, the expiration date of the document and the document support number and click on the "Scan document" button. The NFC reader will be activated and you will be able to bring the document closer to your device. When the device makes a sound, it will begin reading the document and you should not move the document until the reading has finished.
+
+On iPhones, the NFC reader is usually found in the upper right front corner. On Android devices it depends on the brand and model.
+
+The differences in the input data for document scanning on the two platforms are due to the algorithm used to extract the data, on Android we are using the PACE algorithm and on iOS the BAC algorithm.
+
+Below is an image that identifies the different fields of a DNI
+
+![Alt text]( https://image.ondacero.es/clipping/cmsimages01/2022/05/10/D665F0E5-306C-4B3E-911D-B06BB0EB093E/activar-dni-electronico-online-guia-facil_60.jpg?crop=1250,703,x0,y17&width=640&height=360&optimize=high&format=webply "DNI 3.0")
+
+
+## Sources
+
+* React and React Native. Build cross-platform JavaScript and TypeScript apps for the web, desktop, and mobile. Fith Edition. Mikhail Sakhniuk. Adam Boduch. PAckt
+* Eloquent JavaScript. Fourth Edition. Marijn Haverbeke
+* https://medium.com/@cankurtur/how-to-expose-swiftui-views-in-react-native-32d59dbc3492
+* https://medium.com/@jtaverasv/native-modules-swift-based-the-basics-react-native-4ac2d0a712ca
+* https://www.admios.com/blog/react-native-ui-native-components-in-swift-and-java
+* https://reactnative.dev/docs
+* Stackoverflow
 
 
 
