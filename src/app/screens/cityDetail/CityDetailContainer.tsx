@@ -5,13 +5,12 @@ import { getCityDetailUseCase } from "../../../domain/useCase/GetCityDetailUseCa
 
 export const useDetailCityContainer = (id: number) => {
     const { loading, error, data }: GetCityDetailResult = getCityDetailUseCase(id);
-
     const [city, setCity] = useState<CityBo | null>(null);
     const [isLoading, setIsLoading] = useState(loading);
   
     useEffect(() => {
         if(isLoading){
-            setIsLoading(isLoading)
+            setIsLoading(isLoading);
         }
         if (data) {
             setCity(data.city);

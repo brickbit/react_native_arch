@@ -16,7 +16,7 @@ export const CityDetailScreen: React.FC<Props> = ({ route }) => {
 
     if (isLoading && isLoadingPlaces) return <ActivityIndicator size={'large'} style={styles.spinner}/>
 
-    const _keyExtractor = (item: any, index: { toString: () => any;}) => index.toString()
+    const _keyExtractor = (item: any, index: { toString: () => string;}) => index.toString();
 
     const _getHeader = () => {
         return  (

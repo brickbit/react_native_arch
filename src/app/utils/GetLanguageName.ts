@@ -3,31 +3,31 @@
 export const getLanguageName = (language?: string) => {
     switch(language) {
          case 'nl':  {
-             return 'dutch'
+             return 'dutch';
          }
          case 'gr': {
-             return 'greek'
+             return 'greek';
          }
          case 'es': {
-             return 'spanish'
+             return 'spanish';
          }
          case 'en': {
-             return 'english'
+             return 'english';
          }
          case 'pt': {
-             return 'portuguese'
+             return 'portuguese';
          }
          case 'fr': {
-            return 'french'
+            return 'french';
         }
         case 'it': {
-            return 'italian'
+            return 'italian';
         }
         case 'jp': {
-            return 'japanese'
+            return 'japanese';
         }
         default: {
-             return 'unknown language'
+             return 'unknown language';
          }
     }
  }

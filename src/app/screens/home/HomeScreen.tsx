@@ -14,7 +14,7 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
     
     if (isLoading) return <ActivityIndicator size={'large'} style={styles.spinner}/>
 
-    const _keyExtractor = (item: any, index: { toString: () => any;}) => index.toString()
+    const _keyExtractor = (item: any, index: { toString: () => string;}) => index.toString()
 
     const _getHeader = () =>  {
         
@@ -37,10 +37,10 @@ export const HomeScreen: React.FC<Props> =({ navigation }) => {
 
   
     const _renderItem = ({item}: any) => {
-        const name = (item as CityBo).name
-        const language = (item as CityBo).language
-        const currency = (item as CityBo).currency
-        let assetName = getAssetImage(name)
+        const name = (item as CityBo).name;
+        const language = (item as CityBo).language;
+        const currency = (item as CityBo).currency;
+        let assetName = getAssetImage(name);
         return (
             <TouchableOpacity 
                 onPress={() =>{navigation.navigate('CityDetail', { id: item.id, name: item.name})}}

@@ -4,8 +4,6 @@ import { Routes } from '../../navigator/routes';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { ScanDocumentView } from './native';
 
-
-
 type Props = NativeStackScreenProps<Routes, 'ScanDocumentView', 'FCMStack'>;
 
 export const ScanDocumentIos: React.FC<Props> =({ navigation }) => {
@@ -17,10 +15,7 @@ export const ScanDocumentIos: React.FC<Props> =({ navigation }) => {
         </SafeAreaView>
     );
 }
-/*
 
-*/
-  
   
 const styles = StyleSheet.create({
     container: {
